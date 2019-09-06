@@ -120,6 +120,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "imo-front"
+    }
+  },
+  "defaultProject": "imo-front",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
