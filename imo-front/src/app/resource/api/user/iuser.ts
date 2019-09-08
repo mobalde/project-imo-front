@@ -1,4 +1,4 @@
-import { ImoResponse } from 'src/app/models/response/imo-response';
+import { ImoResponse } from '../../../models/response/imo-response';
 
 /**
  * interface gestion utilisateur

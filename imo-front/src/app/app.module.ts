@@ -1,24 +1,31 @@
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatToolbarModule, MatDialogModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { CreationCompteUserMoralComponent } from './vues/user/user-moral/creation-compte-user-moral.component';
 import { HomeComponent } from './vues/home/home.component';
-import { UserPhysiqueModule } from './vues/user/user-physique/modules/user-physique.module';
 import { UserMoralModule } from './vues/user/user-moral/modules/user-moral.module';
+import { UserPhysiqueModule } from './vues/user/user-physique/modules/user-physique.module';
+import { APP_BASE_HREF } from '@angular/common';
+import { HeaderComponent } from './vues/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreationCompteUserMoralComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    UserMoralModule,
     UserPhysiqueModule,
-    UserMoralModule
+    MatDialogModule
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue: ''}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
