@@ -1,7 +1,8 @@
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatToolbarModule, MatDialogModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { CreationCompteUserMoralComponent } from './vues/user/user-moral/creation-compte-user-moral.component';
@@ -22,8 +23,7 @@ import { HeaderComponent } from './vues/header/header.component';
     BrowserModule,
     AppRoutingModule,
     UserMoralModule,
-    UserPhysiqueModule,
-    MatDialogModule
+    UserPhysiqueModule
   ],
   providers: [{provide: APP_BASE_HREF, useValue: ''}],
   bootstrap: [AppComponent]
