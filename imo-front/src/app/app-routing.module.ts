@@ -2,7 +2,7 @@ import { HomeComponent } from './vues/home/home.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { MatToolbarModule, MatSidenavModule, MatIconModule } from '@angular/material';
+import { MatSidenavModule } from '@angular/material';
 
 
 const routes: Routes = [
@@ -16,6 +16,6 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     CommonModule
   ],
-  exports: [RouterModule, MatToolbarModule, MatSidenavModule, MatIconModule]
+  exports: [RouterModule, MatSidenavModule]
 })
 export class AppRoutingModule { }

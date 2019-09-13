@@ -1,24 +1,13 @@
-a {
-    text-decoration: none;
-    color: white;
+.btn {
+    color: white !important;
+    font-weight: 400;
 }
- 
-a:hover, a:active{
-    color: lightgray;
+
+.home {
+    margin-top: 0.3em;
+    background: #8080800d;
 }
- 
-.navigation-items{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
- 
-mat-toolbar{
-    border-radius: 3px;
-}
- 
-@media(max-width: 959px){
-    mat-toolbar{
-        border-radius: 0px;
-    }
+
+.bloc-recherche {
+    padding: 27px;
 }

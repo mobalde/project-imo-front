@@ -12,8 +12,13 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.initNavBar();
   }
 
+  /**
+   * @author Mamadou
+   * @description initialise la barre de navigation du header (responsive)
+   */
   initNavBar() {
     $('.sidenav').sidenav();
   }

@@ -1,8 +1,9 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
+import { MatSelectModule } from '@angular/material';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CreationCompteUserMoralComponent } from './vues/user/user-moral/creation-compte-user-moral.component';
@@ -23,9 +24,14 @@ import { HeaderComponent } from './vues/header/header.component';
     BrowserModule,
     AppRoutingModule,
     UserMoralModule,
-    UserPhysiqueModule
+    UserPhysiqueModule,
+    MatSelectModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [{provide: APP_BASE_HREF, useValue: ''}],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }
