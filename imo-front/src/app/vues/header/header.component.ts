@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.initNavBar();
+    this.initNavBar(); // initialisation de la navbar
   }
 
   /**
