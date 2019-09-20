@@ -1,3 +1,4 @@
+import { SharedService } from './../../shared/shared.service';
 import { TYPES_DEMANDES } from './../../constantes/constantesDatas';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
@@ -16,26 +17,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   serializedDate = new FormControl((new Date()).toISOString());
 
-  constructor() {
+  constructor(private shared: SharedService) {
   }
 
   ngOnInit() {
-    this.initDatePicker();
+    this.shared.initDatePicker('datepicker', 'class');
     this.typesDemandes = TYPES_DEMANDES;
   }
 
   ngAfterViewInit() {
-    this.initSelect();
-  }
-
-  public initDatePicker() {
-    $('.datepicker').datepicker({
-      format: 'dd/mm/yyyy'
-    });
-  }
-
-  public initSelect() {
-    $('.mdb-select').formSelect();
+    this.shared.initSelect('mdb-select', 'class');
   }
 
 }

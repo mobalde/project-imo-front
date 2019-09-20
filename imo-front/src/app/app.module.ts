@@ -12,13 +12,15 @@ import { UserMoralModule } from './vues/user/user-moral/modules/user-moral.modul
 import { UserPhysiqueModule } from './vues/user/user-physique/modules/user-physique.module';
 import { APP_BASE_HREF } from '@angular/common';
 import { HeaderComponent } from './vues/header/header.component';
+import { UserInscriptionComponent } from './vues/user/user-inscription.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreationCompteUserMoralComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    UserInscriptionComponent
   ],
   imports: [
     BrowserModule,
