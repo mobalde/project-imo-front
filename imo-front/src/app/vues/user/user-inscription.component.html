@@ -1,9 +1,44 @@
 <div class="container">
   <div class="row bloc-inscription">
-    <div class="col s12 m12 l12 xl12 contents">
-      <div class="type-user">
-        <span>Qui êtes-vous: </span><input type="checkbox" name="">
+    <form class="col s12 m12 l12 xl12 form-inscription">
+      <div class="row user-info">
+        <div class="col s12 m12 l12 xl12 type-user">
+          <span class="libelle-text">Qui êtes-vous </span><span class="red-text">*</span>
+          <label>
+            <input name="type_user" type="radio" (click)="openform('pro')"/><span>Professionnel</span>
+          </label>
+          <label>
+            <input name="type_user" type="radio" (click)="openform('par')"/><span>Particulier</span>
+          </label>
+        </div>
       </div>
-    </div>
+      <div class="row user-info"> 
+        <div class="input-field col s12 m5 l5 xl5 info-commune_text">
+          <!-- <span class="libelle-text">Nom </span><span class="red-text">*</span> -->
+          <input type="text" name="nom" placeholder="Nom" class="nom">
+        </div>
+        <div class="input-field col s12 m5 l5 xl5 info-commune_text">
+          <!-- <span class="libelle-text">Prénom </span><span class="red-text">*</span> -->
+          <input type="text" name="prenom" placeholder="Prénom" class="prenom">
+        </div>
+      </div>
+      <div class="row user-info"> 
+        <div class="input-field col s12 m12 l12 xl12 info-commune_text">
+          <!-- <span class="libelle-text">Adresse email </span><span class="red-text">*</span> -->
+          <input type="email" name="email" placeholder="Email *" class="email">
+        </div>
+      </div>
+      <div class="row user-info"> 
+        <div class="input-field col s12 m12 l12 xl12 info-commune_text">
+          <!-- <span class="libelle-text">Mot de passe </span><span class="red-text">*</span> -->
+          <input type="password" name="password" placeholder="Mot de passe *" class="passwords">
+        </div>
+      </div>
+      <div class="row user-info">
+        <div class="col col s12 m12 l12 xl12">
+          <button mz-button class="btn green waves-effect waves-light" (click)="valider()"><i class="mdi-action-perm-identity"></i> Valider</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>

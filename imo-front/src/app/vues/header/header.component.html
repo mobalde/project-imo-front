@@ -1,10 +1,10 @@
 <nav class="red navbar-fixed">
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">Loumo</a>
+    <a href="#" class="brand-logo">Loumo</a>
     <a href="#" data-target="mobile-header" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down menu-header">
       <li><span class="depot-offre">D&eacute;poser une annonce</span></li>
-      <li><a href="#">Inscription</a></li>
+      <li><a class="modal-trigger" href="#modalIns">Inscription</a></li>
       <li><a href="#">Connexion</a></li>
     </ul>
   </div>
@@ -16,3 +16,10 @@
   <li><a href="#">Inscription</a></li>
   <li><a href="#">Connexion</a></li>
 </ul>
+
+<div id="modalIns" #modal class="modal">
+  <div class="modal-content">
+    <h4>Inscription</h4>
+    <app-user-inscription></app-user-inscription>
+  </div>
+</div>

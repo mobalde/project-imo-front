@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, ViewChild, ElementRef } from '@angular/core';
+import { SharedService } from '../../shared/shared.service';
 
 declare var $: any;
+declare var M: any;
 
 @Component({
   selector: 'app-header',
@@ -9,18 +11,39 @@ declare var $: any;
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('modal', {static: false}) modal: ElementRef;
+  instance: any;
+
+  constructor(private sharedService: SharedService) {}
 
   ngOnInit() {
-    this.initNavBar(); // initialisation de la navbar
+    this.sharedService.initNavBar('sidenav', 'class'); // initialisation de la navbar
+  }
+
+  // Lancement des composants apres initialisation
+  ngAfterViewInit(): void {
+    this.sharedService.initModal(this.modal); // initialisation du modal inscription
+    this.instance = this.sharedService.getInstances(this.modal);
   }
 
   /**
+   * 
    * @author Mamadou
-   * @description initialise la barre de navigation du header (responsive)
+   * @description sauvegarde de l'inscription
+   * 
    */
-  initNavBar() {
-    $('.sidenav').sidenav();
+  valider() {
+
+  }
+
+  /**
+   * 
+   * @author Mamadou
+   * @description fermeture de la popin
+   * 
+   */
+  annuler() {
+    this.instance.close();
   }
 
 }

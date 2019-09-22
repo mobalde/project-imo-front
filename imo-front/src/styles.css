@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.modal {
+  width: 50% !important;
+  overflow: auto !important;
+}
+.modal-content h4 {
+  text-align: center;
+  border-bottom: 1px solid #F44336;
+  padding-bottom: 1rem;
+  border-width: 3px;
+  margin-bottom: 2rem;
+}
