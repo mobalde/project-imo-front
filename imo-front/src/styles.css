@@ -10,3 +10,10 @@
   border-width: 3px;
   margin-bottom: 2rem;
 }
+.modal-overlay {
+  opacity: 0.9 !important;
+}
+.modal-content .fermeture {
+  float: right;
+  color: #F44336;
+}

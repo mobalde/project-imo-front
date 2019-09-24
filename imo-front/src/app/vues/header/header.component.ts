@@ -42,7 +42,7 @@ export class HeaderComponent implements OnInit {
    * @description fermeture de la popin
    * 
    */
-  annuler() {
+  clos() {
     this.instance.close();
   }
 
