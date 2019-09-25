@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   }
 
   // Lancement des composants apres initialisation
-  ngAfterViewInit(): void {
+  ngAfterViewInit(): void{
     this.sharedService.initModal(this.modal); // initialisation du modal inscription
     this.instance = this.sharedService.getInstances(this.modal);
   }

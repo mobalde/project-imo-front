@@ -16,4 +16,5 @@
 .modal-content .fermeture {
   float: right;
   color: #F44336;
+  cursor: pointer;
 }

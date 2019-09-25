@@ -1,4 +1,6 @@
+import { ErrorsFormGeneriquesService } from './../../errors/errors-form-generiques.service';
 import { Component, OnInit } from '@angular/core';
+import { CHAMPS_FORM_INSCRIPTION } from '../../constantes/constantes-structures';
 
 @Component({
   selector: 'app-user-inscription',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserInscriptionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private errors: ErrorsFormGeneriquesService) { }
 
   ngOnInit() {
+  }
+
+  valider() {
+    this.errors.generateErrorsForm(CHAMPS_FORM_INSCRIPTION, 'form-inscription', 'class');
   }
 
 }

@@ -1,5 +1,5 @@
 import { SharedService } from './../../shared/shared.service';
-import { TYPES_DEMANDES } from './../../constantes/constantesDatas';
+import { TYPES_DEMANDES } from '../../constantes/constantes-datas';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {FormControl} from '@angular/forms';
 
