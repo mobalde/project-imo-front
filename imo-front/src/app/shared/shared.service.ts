@@ -19,18 +19,10 @@ export class SharedService {
    *
    */
   public initDatePicker(cible: string, type: string) {
-    switch(type) {
-      case 'class':
-        $('.' + cible).datepicker({
-          format: 'dd/mm/yyyy'
-        })
-        break;
-      case 'id':
-        $('#' + cible).datepicker({
-          format: 'dd/mm/yyyy'
-        });
-        break;
-    }
+    const caractere = type === 'class' ? '.' : '#';
+    $(caractere + cible).datepicker({
+      format: 'dd/mm/yyyy'
+    });
   }
 
   /**
@@ -42,14 +34,8 @@ export class SharedService {
    * 
    */
   public initSelect(cible: string, type: string) {
-    switch(type) {
-      case 'class':
-        $('.' + cible).formSelect();
-        break;
-      case 'id':
-        $('#' + cible).formSelect();
-        break;
-    }
+    const caractere = type === 'class' ? '.' : '#';
+    $(caractere + cible).formSelect();
   }
 
   /**
@@ -61,14 +47,8 @@ export class SharedService {
    * 
    */
   initNavBar(cible: string, type: string) {
-    switch(type) {
-      case 'class':
-      $('.'+cible).sidenav();
-        break;
-      case 'id':
-      $('#'+cible).sidenav();
-        break;
-    }
+    const caractere = type === 'class' ? '.' : '#';
+    $(caractere + cible).sidenav();
   }
 
   /**
