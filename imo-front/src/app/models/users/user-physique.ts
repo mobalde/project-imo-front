@@ -10,4 +10,19 @@ export class UserPhysique extends User {
 
     /** sexe */
     public sexe: string;
+
+    /**
+     *
+     * @author Mamadou
+     * @description initialise l'objet user moral
+     * @param user identifiants user
+     * @param siret identifiant entreprise
+     * @param representantLegal info personnel utilisateu
+     *
+     */
+    public init(user: User, representantLegal: RepresentantLegal) {
+        this.email = user.email;
+        this.password = user.password;
+        this.representantLegal = representantLegal;
+      }
 }

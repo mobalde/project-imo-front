@@ -18,18 +18,28 @@ export class UserInscriptionComponent implements OnInit {
   professionnel: UserMoral;
   particulier: UserPhysique;
   infoUser: RepresentantLegal;
-  result = false;
+  valideForm = false;
 
-  constructor(private errors: ErrorsFormGeneriquesService) { }
+  constructor(private errors: ErrorsFormGeneriquesService) { 
+     this.user = new User();
+     this.professionnel = new UserMoral();
+     this.particulier = new UserPhysique();
+     this.infoUser = new RepresentantLegal();
+  }
 
   ngOnInit() {
   }
 
   valider() {
-    this.result = this.errors.generateErrorsForm(CHAMPS_FORM_INSCRIPTION, 'form-inscription', 'class');
-    if ( this.result ) {
-      // soumettre le formulaire
-      console.log('_________ soumettre');
+    this.valideForm = this.errors.generateErrorsForm(CHAMPS_FORM_INSCRIPTION, 'form-inscription', 'class');
+    if ( this.valideForm ) {
+      if (this.isBlocProfessionnel) {
+        // professionnel
+        this.professionnel.init(this.user, this.infoUser);
+      } else {
+        // particulier
+        this.particulier.init(this.user, this.infoUser);
+      }
     }
   }
 

@@ -7,6 +7,8 @@ export class User {
     /** mot de passe utilisateur */
     public password: string;
 
+    public typeUtilisateur: string;
+
     /** liste des roles */
     public roles: Role[];
 }
